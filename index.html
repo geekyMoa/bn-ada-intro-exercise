@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ada 1</title>
+
+    <style>
+      div {
+        padding: 50px;
+        text-align: center;
+      }
+
+      img {
+        max-width: 400px;
+        border: 10px solid deeppink;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <img src="kelyddon.png" alt="Idhults Kelyddon" />
+    </div>
+
+    <script>
+      var imgElement = document.getElementsByTagName('img')[0];
+
+      imgElement.addEventListener('click', function() {
+
+        if (this.alt === "?") {
+          this.setAttribute('alt', "Balnecroft Xander");
+          this.setAttribute('src', 'xander.png')
+        } else {
+          this.setAttribute('alt', "Idhults Kelyddon");
+          this.setAttribute('src', 'kelyddon.png')
+        }
+
+      });
+    </script>
+  </body>
+</html>
