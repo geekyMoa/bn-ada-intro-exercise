@@ -5,6 +5,12 @@
     <title>Ada 1</title>
 
     <style>
+      body {
+        background: white;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+      }
+
       div {
         padding: 50px;
         text-align: center;
@@ -14,6 +20,10 @@
         max-width: 400px;
         border: 10px solid deeppink;
       }
+
+      .caption {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -22,19 +32,22 @@
       <img src="kelyddon.png" alt="Idhults Kelyddon" />
     </div>
 
+    <p class="caption">Moa med häst.</p>
+
     <script>
       var imgElement = document.getElementsByTagName('img')[0];
+      var captionElement = document.getElementsByClassName('caption')[0];
 
       imgElement.addEventListener('click', function() {
-
-        if (this.alt === "?") {
+        if (imgElement.alt === "Idhults Kelyddon") {
           this.setAttribute('alt', "Balnecroft Xander");
           this.setAttribute('src', 'xander.png')
+          captionElement.innerHTML = 'Balnecroft Xander';
         } else {
           this.setAttribute('alt', "Idhults Kelyddon");
           this.setAttribute('src', 'kelyddon.png')
+          captionElement.innerHTML = 'Idhults Kelyddon';
         }
-
       });
     </script>
   </body>
